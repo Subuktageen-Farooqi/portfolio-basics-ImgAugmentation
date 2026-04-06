@@ -100,7 +100,7 @@ The single-image PyTorch script produces **40 augmented outputs**, while the bul
 
 Two example sunflower images were used to demonstrate augmentation behavior on bright natural imagery with strong petal structure, texture, and color contrast.
 
-**<figure><img src="docs/images/image_01.jpg" width="200" height="400" /> <img src="docs/images/image_02.jpg" width="200" height="400" /></figure>**
+**<figure><img src="docs/images/image_01.webp" width="200" height="400" /> <img src="docs/images/image_02.jpg" width="200" height="400" /></figure>**
 
 ## Results
 
