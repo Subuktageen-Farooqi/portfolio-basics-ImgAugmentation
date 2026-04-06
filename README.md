@@ -46,37 +46,33 @@ Across the tutorial and the code files, the following augmentation techniques ar
 ### 1. Rotation
 Images are randomly rotated to simulate viewpoint changes and orientation variation.
 
-**Insert image here:** original image vs rotated augmented sample
-
+**<figure><img src="docs/images/image_02.jpg" width="200" height="400" /> vs. <img src="docs/images/image_2_7.jpg" width="200" height="400" /><br><figcaption>&emsp;&emsp;&emsp;Original Image&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Rotated Image</figcaption></figure>**
 
 ### 2. Shear / Affine Transformation
 Shear is a geometric distortion, while the PyTorch scripts use `RandomAffine` with translation, scaling, and shear to produce more flexible spatial perturbations.
 
-**Insert image here:** affine/sheared augmentation examples
-
+**<figure><img src="docs/images/image_02.jpg" width="200" height="400" /> vs. <img src="docs/images/image_2_7.jpg" width="200" height="400" /><br><figcaption>&emsp;&emsp;&emsp;Original Image&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Sheared Image</figcaption></figure>**
 
 ### 3. Zoom / Resized Cropping
 Basic random zooming through Keras, while the PyTorch implementations use `RandomResizedCrop`, which changes crop region and scale while preserving the target output size. This helps simulate framing differences and partial object emphasis.
 
-**Insert image here:** zoomed / cropped augmentation samples
-
+**<figure><img src="docs/images/image_02.jpg" width="200" height="400" /> vs. <img src="docs/images/image_2_18.jpg" width="200" height="400" /><br><figcaption>&emsp;&emsp;&emsp;Original Image&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Zoomed Image</figcaption></figure>**
 
 ### 4. Horizontal Flip
 Horizontal flipping is used to mirror the image, increasing directional variation in the dataset.
 
-**Insert image here:** original image vs horizontally flipped version
-
+**<figure><img src="docs/images/image_02.jpg" width="200" height="400" /> vs. <img src="docs/images/image_2_18.jpg" width="200" height="400" /><br><figcaption>&emsp;&emsp;&emsp;Original Image&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Flipped Image</figcaption></figure>**
 
 ### 5. Brightness Adjustment
 Both Keras and PyTorch code apply brightness-related transformations to simulate lighting changes. In PyTorch this is done via `ColorJitter`; in Keras it is done through `brightness_range`.
 
-**Insert image here:** brightness-augmented examples
+**<figure><img src="docs/images/image_02.jpg" width="200" height="400" /> vs. <img src="docs/images/image_2_2.jpg" width="200" height="400" /><br><figcaption>&emsp;&emsp;&emsp;Original Image&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Dimmed Image</figcaption></figure>**
 
 
 ### 6. Contrast and Saturation Adjustment
 The PyTorch implementations use `ColorJitter` to vary **contrast** and **saturation**, extending beyond the more basic Keras parameter set. This broadens appearance diversity and makes the PyTorch pipeline more expressive. 
 
-**Insert image here:** contrast/saturation variation examples
+**<figure><img src="docs/images/image_02.jpg" width="200" height="400" /> vs. <img src="docs/images/image_2_18.jpg" width="200" height="400" /><br><figcaption>&emsp;&emsp;&emsp;Original Image&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;High Contrast Image</figcaption></figure>**
 
 
 ## Framework Implementations
@@ -104,20 +100,11 @@ The single-image PyTorch script produces **40 augmented outputs**, while the bul
 
 Two example sunflower images were used to demonstrate augmentation behavior on bright natural imagery with strong petal structure, texture, and color contrast.
 
-**Insert image here:** source image 1  
-**Insert image here:** source image 2
-
+**<figure><img src="docs/images/image_01.jpg" width="200" height="400" /> <img src="docs/images/image_02.jpg" width="200" height="400" /></figure>**
 
 ## Results
 
 The main result of this project is the successful generation of diverse augmented image sets from limited source data.
-
-### Output Summary
-
-- **Keras script:** generates 40 augmented images from one input image. :contentReference[oaicite:31]{index=31}
-- **PyTorch single-image script:** generates 40 augmented images from one input image. :contentReference[oaicite:32]{index=32}
-- **PyTorch bulk script:** generates 40 augmented images for each valid image in a folder. :contentReference[oaicite:33]{index=33}
-
 
 ## Observations
 
